@@ -50,7 +50,7 @@ You can follow tutorials or sample projects and compile them either:
 - Directly from the terminal using g++ or clang++ with sdl3-config for flags:
 
 ```bash
-g++ your_file.cpp $(sdl3-config --cflags --libs) -o your_program
+g++ -std=c++17 main.cpp -o my_app $(pkg-config --cflags --libs sdl3)
 ```
 - Or set up a CMake-based project and link against SDL3:
 ```cmake
