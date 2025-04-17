@@ -1,0 +1,17 @@
+Cmake config explanation:
+cmake ..
+Tells CMake to configure the SDL project located in the parent directory (..), assuming you're in a build/ directory.
+
+-DCMAKE_BUILD_TYPE=Release
+Builds SDL with optimizations enabled and without debug symbols.
+
+-DSDL_TEST=OFF
+Skips building SDL's internal test suite (not needed for installation or development use).
+
+-DSDL_STATIC=OFF
+Disables building of the static SDL3 library (.a files), and only builds the shared/dynamic version (.so).
+
+-DCMAKE_INSTALL_PREFIX=/usr/local
+Installs the SDL3 library and headers to /usr/local, which is the standard location for user-installed (non-package-managed) software.
+
+This setup avoids cluttering the system-managed /usr directory and allows easy removal later if needed.
